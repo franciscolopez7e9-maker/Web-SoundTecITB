@@ -1,0 +1,8 @@
+SoundTecITB: Fran Lopez  
+
+Este proyecto es una pagina web de musica, el cual se divide de diferentes secciones en la primer tenemos el indice osea el home en la cual
+presenta los festival destacado, lanzamientos recientes y el Top 10 de artistas.
+Tambien tenemos una pagina para a la informacion de eventos y grupos musicales la cual es la de festivales.html, acompañada de la pagina detalle.html la cual es una pagina para ver al detalle un album o artista especifico y para acabar alta de registro 
+para nuevos usuarios de la plataforma y enterarse de las novedades.
+He aprendido a usar CSS para crear diseños y tener una pagina mas bonita y no solo texto en plano, tambien he aprendido porque es importante  la organización de archivos para el uso de CSS y no este todo desordenado 
+y este proyecto me a sido interesante porque permite aplicar lo que usan las grandes paginas web mejor dicho a entender lo que usan las gran mayoria de pagians webs aunque tyambein tuve dificultades como ajustar las imágenes para que tengan el mismo tamaño.
