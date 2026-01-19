@@ -1,0 +1,180 @@
+:root {
+    --rosa: #FF2BA6;
+    --cyan: #20E3FF;
+    --lima: #B6FF3B;
+    --fondo: #0a0a0a;
+    --tarjeta: #121212;
+    --texto: #ffffff;
+    --texto-gris: #a0a0a0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 15px 30px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    background: linear-gradient(to right, var(--cyan), var(--rosa));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: var(--texto-gris);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: var(--texto);
+    text-shadow: 0 0 5px var(--cyan);
+}
+
+/* datos */
+.form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.form-card {
+    background-color: var(--tarjeta);
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(32, 227, 255, 0.1);
+}
+
+.form-card h3 {
+    color: var(--rosa);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-subtitle {
+    color: var(--texto-gris);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Formulario Neon */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--cyan);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    background-color: #050505;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--rosa);
+    box-shadow: 0 0 10px rgba(255, 43, 166, 0.3);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--lima);
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 0 20px var(--lima);
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    background-color: #050505;
+    color: var(--texto-gris);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+footer a {
+    color: var(--texto-gris);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--rosa);
+}
+
+address {
+    font-style: normal;
+}

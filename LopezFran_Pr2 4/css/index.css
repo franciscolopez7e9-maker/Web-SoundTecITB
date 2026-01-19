@@ -1,0 +1,304 @@
+:root {
+    /* Colores */
+    --rosa: #FF2BA6;
+    --cyan: #20E3FF;
+    --lima: #B6FF3B;
+    --fondo: #0a0a0a;
+    --tarjeta: #121212;
+    --texto: #ffffff;
+    --texto-gris: #a0a0a0;
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: sans-serif; /* Tipografía */
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Quitar los puntos de las listas */
+ul, ol {
+    list-style: none; 
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 8px; /* Bordes redondeados en todas las fotos */
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 15px 30px;
+    border-bottom: 1px solid #333;
+    
+    /* Separar logo y menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    /* Texto con degradado */
+    background: linear-gradient(to right, var(--cyan), var(--rosa));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Navegación */
+header nav ul {
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+header nav a {
+    color: var(--texto-gris);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: var(--texto);
+    text-shadow: 0 0 5px var(--cyan); /* Brillo al pasar el ratón */
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar el bloque principal */
+    padding: 20px;
+}
+
+/* Títulos de sección */
+h2 {
+    color: var(--cyan);
+    border-left: 5px solid var(--rosa); /* Detalle de diseño */
+    padding-left: 10px;
+    margin: 40px 0 20px 0;
+}
+
+main > section:nth-of-type(1) {
+    background: linear-gradient(to right, #2a1020, #0a0a0a);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+main > section:nth-of-type(1) h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Etiquetas BCN Indie Pop */
+main > section:nth-of-type(1) ul {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+main > section:nth-of-type(1) ul li {
+    background-color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Botones del banner */
+main > section:nth-of-type(1) > a {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Entradas Rosa  */
+main > section:nth-of-type(1) > a:first-of-type {
+    background-color: var(--rosa);
+    box-shadow: 0 0 10px var(--rosa);
+}
+
+/* Descubre Musica lima */
+main > section:nth-of-type(1) > a:last-of-type {
+    background-color: var(--lima);
+    box-shadow: 0 0 10px var(--lima);
+}
+
+/* Lanzamientos */
+main > section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* debe ocupar todo el ancho */
+main > section:nth-of-type(2) h2,
+main > section:nth-of-type(2) > a {
+    grid-column: 1 / -1;
+}
+
+/* Tarjeta individual */
+main > section:nth-of-type(2) article {
+    background-color: var(--tarjeta);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s; /* Animación */
+}
+
+main > section:nth-of-type(2) article:hover {
+    transform: translateY(-5px); /* Pasar conratón */
+    background-color: #1a1a1a;
+}
+
+main > section:nth-of-type(2) article h3 {
+    font-size: 1rem;
+    margin: 10px 0 5px 0;
+}
+
+main > section:nth-of-type(2) article p {
+    font-size: 0.8rem;
+    color: var(--texto-gris);
+    margin-bottom: 10px;
+}
+
+/* Botón Más info */
+main > section:nth-of-type(2) article a {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    border: 1px solid var(--texto-gris);
+    border-radius: 15px;
+}
+
+main > section:nth-of-type(2) article a:hover {
+    background-color: var(--texto);
+    color: black;
+}
+
+/* Artistas destacados */
+main > section:nth-of-type(3) ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+main > section:nth-of-type(3) li {
+    background-color: #151515;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex; /* Alinear foto y texto */
+    align-items: center;
+    gap: 15px;
+}
+
+main > section:nth-of-type(3) img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* Imagen redonda */
+}
+
+/* Festivales */
+main > section:nth-of-type(4) {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* h2 ocupe todo el ancho en Flex */
+main > section:nth-of-type(4) h2 {
+    width: 100%;
+}
+
+main > section:nth-of-type(4) article {
+    flex: 1; /* Mismo espacio */
+    min-width: 250px;
+    background-color: #111;
+    border: 2px solid var(--lima); /* Borde verde */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+main > section:nth-of-type(4) h3 {
+    color: var(--lima);
+    margin-bottom: 10px;
+}
+
+/* Aside */
+aside {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+aside section {
+    flex: 1;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    /* Degradado  */
+    background: linear-gradient(135deg, rgba(32, 227, 255, 0.1), transparent);
+}
+
+aside a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--cyan);
+    font-weight: bold;
+}
+
+/* Top 10 */
+main > section:last-of-type ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 10px;
+}
+
+main > section:last-of-type li {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+    color: var(--texto-gris);
+}
+
+main > section:last-of-type li:hover {
+    color: var(--texto);
+    padding-left: 5px; /*  movimiento */
+    transition: 0.2s;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #333;
+    color: var(--texto-gris);
+    font-size: 0.9rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+footer a:hover {
+    color: var(--rosa);
+}

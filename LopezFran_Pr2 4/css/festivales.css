@@ -1,0 +1,240 @@
+:root {
+    --color-pink: #FF2BA6;
+    --color-cyan: #20E3FF;
+    --color-lime: #B6FF3B;
+    --color-bg: #0a0a0a;
+    --color-card: #121212;
+    --color-text: #ffffff;
+    --color-text-dim: #a0a0a0;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box; /* Caja */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    
+    /*  Footer siempre quede abajo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+
+header {
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #333;
+    
+    /*alinear extremos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: sticky; /* Menu fijo */
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    /* Texto degradado Neon */
+    background: linear-gradient(90deg, var(--color-cyan), var(--color-pink));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: var(--color-text-dim);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+header nav ul li a:hover {
+    color: var(--color-text);
+    text-shadow: 0 0 5px var(--color-cyan);
+}
+
+
+main {
+    flex: 1; /* Ocupar el espacio entre header y footer */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 40px 20px;
+    width: 100%;
+}
+
+main h1 {
+    color: var(--color-lime); 
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-pink); 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main p {
+    color: var(--color-text-dim);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+
+main ul.lista-festivales {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main ul.lista-festivales li {
+    background-color: var(--color-card);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main ul.lista-festivales li:hover {
+    background-color: #1a1a1a;
+}
+
+footer {
+    background-color: #050505;
+    border-top: 1px solid #333;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--color-text-dim);
+    font-size: 0.8rem;
+    margin-top: auto;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+footer ul li a:hover {
+    color: var(--color-pink);
+}
+
+address {
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+
+.list-header {
+    margin-bottom: 40px;
+    border-left: 5px solid var(--color-pink);
+    padding-left: 20px;
+}
+
+.lista-festivales {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.festival-card {
+    background-color: var(--color-card);
+    border: 1px solid #222;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    gap: 25px;
+}
+
+/* Efecto de elevacion y del brillo al pasar el raton */
+.festival-card:hover {
+    transform: translateX(10px);
+    border-color: var(--color-cyan);
+    box-shadow: 0 0 20px rgba(32, 227, 255, 0.1);
+}
+
+.fest-img {
+    position: relative;
+    width: 120px;
+    height: 80px;
+}
+
+.fest-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Etiquetas visuales  */
+.badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sold-out { background-color: #ff4444; color: white; }
+.hurry { background-color: var(--color-lime); color: black; }
+
+.fest-info h3 {
+    color: var(--color-cyan);
+    margin-bottom: 5px;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--color-text-dim);
+}
+
+.btn-detail {
+    background-color: transparent;
+    border: 1px solid var(--color-pink);
+    color: var(--color-pink);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.btn-detail:hover {
+    background-color: var(--color-pink);
+    color: black;
+    box-shadow: 0 0 10px var(--color-pink);
+}
